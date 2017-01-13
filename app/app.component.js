@@ -5,6 +5,16 @@ function AppComponent() {
   this.title = 'ES5 JavaScript';
 
   this.inputData = 'hello 4';
+
+  var c1 = 0;
+  this.checkboxList = [];
+
+  for (c1 = 0; c1 < 1200; c1 += 1) {
+    this.checkboxList.push({
+      checked: false,
+      id: c1
+    });
+  }
 }
 
 AppComponent.annotations = [

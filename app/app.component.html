@@ -1,3 +1,30 @@
+<br />
+<h1>Check box list</h1>
+<br />
+<div class="checkbox-container">
+  <div *ngFor="let checkbox of checkboxList">
+    <label>
+      <input
+        type="checkbox"
+        id="{{'chbox' + checkbox.id}}"
+        value=""
+        [(ngModel)]="checkbox.checked"
+      />
+      {{checkbox.id + ' ' + checkbox.checked}}
+    </label>
+    <br />
+  </div>
+</div>
+<br />
+
+<br />
+<h1>Basic input</h1>
+<br />
+<input type="text" [(ngModel)]="inputData">
+<br />
+<span>{{inputData}}</span>
+<br />
+
 <a id="toc"></a>
 <h1>{{title}}</h1>
 <a href="#class-metadata">Classes and Class Metadata</a><br>
@@ -24,12 +51,6 @@
 <hero-io></hero-io>
 <h4 id="io-metadata-dsl">Input and Output Metadata (DSL)</h4>
 <hero-io-dsl></hero-io-dsl>
-
-<br />
-<h1>Basic input</h1>
-<input type="text" class="form-control" required [(ngModel)]="inputData">
-<br />
-<span>{{inputData}}</span>
 
 <hr>
 <h4 id="dependency-injection">Dependency Injection</h4>
